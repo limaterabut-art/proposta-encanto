@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proposta Comercial — Clínica Encanto</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --hh-green:      #2CD668;
+  --hh-dark:       #07403F;
+  --hh-cream:      #F7F4E3;
+  --hh-black:      #0D0D0D;
+  --hh-gray:       #888888;
+  --hh-gray-light: #DEDAD0;
+  --hh-font:       'Space Grotesk', -apple-system, sans-serif;
+  --hh-shadow-sm:  0 2px 8px rgba(7,64,63,0.08);
+  --hh-shadow-md:  0 4px 16px rgba(7,64,63,0.12);
+  --hh-shadow-lg:  0 8px 32px rgba(7,64,63,0.18);
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family: var(--hh-font);
+  background: #0a0a0a;
+  color: var(--hh-dark);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* ── SLIDE SYSTEM ─────────────────────────────────── */
+.slide {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 64px 80px;
+}
+
+.slide-dark  { background: var(--hh-dark); }
+.slide-light { background: var(--hh-cream); }
+.slide-green { background: var(--hh-green); }
+.slide-black { background: var(--hh-black); }
+.slide-white { background: #ffffff; }
+
+/* separator between slides */
+.slide + .slide {
+  border-top: 3px solid rgba(44,214,104,0.15);
+}
+
+/* ── LOGO SVG ──────────────────────────────────────── */
+.hh-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.hh-logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+.hh-logo-text .health {
+  font-size: 18px; font-weight: 700;
+  color: var(--hh-cream); letter-spacing: -0.02em;
+}
+.hh-logo-text .hub {
+  font-size: 18px; font-weight: 700;
+  color: var(--hh-green); letter-spacing: -0.02em;
+}
+.hh-logo-text-dark .health { color: var(--hh-dark); }
+.hh-logo-text-dark .hub    { color: var(--hh-dark); }
+
+/* ── TAGS / LABELS ────────────────────────────────── */
+.tag {
+  display: inline-block;
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 0.13em; text-transform: uppercase;
+  padding: 5px 14px; border-radius: 999px;
+}
+.tag-green  { background: var(--hh-green); color: var(--hh-dark); }
+.tag-dark   { background: var(--hh-dark);  color: var(--hh-cream); }
+.tag-cream  { background: var(--hh-cream); color: var(--hh-dark); }
+.tag-soft   { background: rgba(44,214,104,0.15); color: var(--hh-dark); }
+.tag-outline{ border: 1.5px solid var(--hh-green); color: var(--hh-green); background: transparent; }
+.tag-outline-cream { border: 1.5px solid rgba(247,244,227,0.3); color: var(--hh-cream); background: transparent; }
+
+/* ── DECORATIVE CIRCLES ───────────────────────────── */
+.deco-circle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* ── TYPOGRAPHY ───────────────────────────────────── */
+.eyebrow {
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.eyebrow-green { color: var(--hh-green); }
+.eyebrow-cream { color: rgba(247,244,227,0.5); }
+.eyebrow-gray  { color: var(--hh-gray); }
+
+h1 { font-size: 64px; font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; }
+h2 { font-size: 44px; font-weight: 700; letter-spacing: -0.03em; line-height: 1.1; }
+h3 { font-size: 28px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; }
+h4 { font-size: 20px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.3; }
+h5 { font-size: 15px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.4; }
+
+.text-cream { color: var(--hh-cream); }
+.text-green { color: var(--hh-green); }
+.text-dark  { color: var(--hh-dark); }
+.text-muted-dark { color: rgba(247,244,227,0.6); }
+.text-muted-light { color: rgba(7,64,63,0.55); }
+
+.lead {
+  font-size: 20px; font-weight: 400; line-height: 1.6;
+}
+.lead-sm {
+  font-size: 17px; font-weight: 400; line-height: 1.6;
+}
+
+/* ── CARDS ────────────────────────────────────────── */
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 28px;
+  border: 1px solid var(--hh-gray-light);
+  box-shadow: var(--hh-shadow-sm);
+}
+.card-dark {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(44,214,104,0.15);
+  border-radius: 16px;
+  padding: 28px;
+}
+.card-accent {
+  background: white;
+  border-radius: 16px;
+  padding: 28px;
+  border: 1px solid var(--hh-gray-light);
+  border-top: 4px solid var(--hh-green);
+  box-shadow: var(--hh-shadow-sm);
+}
+.card-green {
+  background: var(--hh-green);
+  border-radius: 16px;
+  padding: 28px;
+}
+.card-dark-solid {
+  background: var(--hh-dark);
+  border-radius: 16px;
+  padding: 28px;
+}
+
+/* ── GRID ─────────────────────────────────────────── */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
+.grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 20px; }
+.grid-7030 { display: grid; grid-template-columns: 0.7fr 0.3fr; gap: 48px; align-items: center; }
+.grid-5050 { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.grid-4060 { display: grid; grid-template-columns: 0.4fr 0.6fr; gap: 64px; align-items: center; }
+
+/* ── DIVIDER ──────────────────────────────────────── */
+.divider {
+  width: 48px; height: 4px;
+  background: var(--hh-green);
+  border-radius: 4px;
+  margin: 20px 0;
+}
+.divider-wide {
+  width: 100%; height: 1px;
+  background: rgba(44,214,104,0.2);
+  margin: 32px 0;
+}
+
+/* ── NUMBER BADGE ─────────────────────────────────── */
+.num-badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; border-radius: 50%;
+  font-size: 13px; font-weight: 700;
+  flex-shrink: 0;
+}
+.num-badge-green { background: var(--hh-green); color: var(--hh-dark); }
+.num-badge-dark  { background: rgba(255,255,255,0.1); color: var(--hh-cream); }
+.num-badge-cream { background: var(--hh-cream); color: var(--hh-dark); }
+
+/* ── PROBLEM ITEM ─────────────────────────────────── */
+.problem-item {
+  display: flex; gap: 16px; align-items: flex-start;
+  padding: 20px 24px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(44,214,104,0.12);
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+.problem-icon {
+  width: 40px; height: 40px; border-radius: 10px;
+  background: rgba(44,214,104,0.12);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  font-size: 18px;
+}
+
+/* ── CHECK LIST ───────────────────────────────────── */
+.check-list { list-style: none; }
+.check-list li {
+  display: flex; gap: 12px; align-items: flex-start;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(44,214,104,0.1);
+  font-size: 15px; line-height: 1.5;
+}
+.check-list li:last-child { border-bottom: none; }
+.check-list li::before {
+  content: '';
+  width: 20px; height: 20px;
+  background: var(--hh-green);
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 2px;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4L4.5 7.5L11 1' stroke='%2307403F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.check-list-cream li { color: var(--hh-cream); border-bottom-color: rgba(247,244,227,0.1); }
+.check-list-cream li::before { background-color: rgba(44,214,104,0.8); }
+
+/* ── METRIC BOX ───────────────────────────────────── */
+.metric-box {
+  text-align: center;
+  padding: 32px 20px;
+  border-radius: 16px;
+}
+.metric-number {
+  font-size: 48px; font-weight: 700;
+  letter-spacing: -0.04em; line-height: 1;
+  margin-bottom: 8px;
+}
+.metric-label {
+  font-size: 13px; font-weight: 500; line-height: 1.4;
+}
+
+/* ── PHASE BOX ────────────────────────────────────── */
+.phase-header {
+  display: flex; align-items: center; gap: 16px;
+  margin-bottom: 24px;
+}
+.phase-num {
+  font-size: 48px; font-weight: 700; letter-spacing: -0.05em;
+  color: rgba(44,214,104,0.25); line-height: 1;
+}
+
+/* ── QUOTE ────────────────────────────────────────── */
+.quote {
+  border-left: 4px solid var(--hh-green);
+  padding: 16px 24px;
+  margin: 0;
+}
+
+/* ── INVESTMENT TABLE ─────────────────────────────── */
+.inv-row {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 28px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+.inv-row-main {
+  background: var(--hh-green);
+  padding: 24px 28px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+.inv-label { font-size: 16px; font-weight: 600; }
+.inv-value { font-size: 28px; font-weight: 700; letter-spacing: -0.03em; }
+.inv-detail { font-size: 13px; font-weight: 400; opacity: 0.7; margin-top: 2px; }
+
+/* ── STEP FLOW ────────────────────────────────────── */
+.step-flow {
+  display: flex; gap: 0; align-items: stretch;
+  position: relative;
+}
+.step-item {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  padding: 0 8px;
+}
+.step-item::after {
+  content: '→';
+  position: absolute;
+  right: -10px; top: 18px;
+  font-size: 16px;
+  color: var(--hh-green);
+  font-weight: 700;
+}
+.step-item:last-child::after { display: none; }
+.step-circle {
+  width: 48px; height: 48px; border-radius: 50%;
+  background: rgba(44,214,104,0.15);
+  border: 2px solid var(--hh-green);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 12px;
+  font-size: 18px;
+}
+
+/* ── PILL CTA ─────────────────────────────────────── */
+.cta-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--hh-green); color: var(--hh-dark);
+  padding: 16px 32px; border-radius: 999px;
+  font-size: 16px; font-weight: 700; letter-spacing: 0.01em;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(44,214,104,0.35);
+}
+
+/* ── HEADER / NAV ─────────────────────────────────── */
+.slide-nav {
+  position: absolute; top: 32px; left: 80px; right: 80px;
+  display: flex; align-items: center; justify-content: space-between;
+  z-index: 10;
+}
+.slide-num {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ── COVER specific ───────────────────────────────── */
+#slide-cover {
+  min-height: 100vh;
+  display: flex; flex-direction: column; justify-content: center;
+  background: var(--hh-dark);
+  padding: 80px;
+  position: relative;
+  overflow: hidden;
+}
+#slide-cover .deco1 {
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(44,214,104,0.12) 0%, transparent 70%);
+  top: -200px; right: -200px;
+}
+#slide-cover .deco2 {
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(44,214,104,0.07) 0%, transparent 70%);
+  bottom: -100px; left: 200px;
+}
+
+/* ── SPACERS ──────────────────────────────────────── */
+.mt-4  { margin-top: 4px; }
+.mt-8  { margin-top: 8px; }
+.mt-12 { margin-top: 12px; }
+.mt-16 { margin-top: 16px; }
+.mt-20 { margin-top: 20px; }
+.mt-24 { margin-top: 24px; }
+.mt-32 { margin-top: 32px; }
+.mt-40 { margin-top: 40px; }
+.mt-48 { margin-top: 48px; }
+.mb-4  { margin-bottom: 4px; }
+.mb-8  { margin-bottom: 8px; }
+.mb-16 { margin-bottom: 16px; }
+.mb-24 { margin-bottom: 24px; }
+.mb-32 { margin-bottom: 32px; }
+
+/* ── HIGHLIGHT BAR ────────────────────────────────── */
+.highlight-bar {
+  background: linear-gradient(135deg, rgba(44,214,104,0.15) 0%, rgba(44,214,104,0.05) 100%);
+  border: 1px solid rgba(44,214,104,0.25);
+  border-left: 4px solid var(--hh-green);
+  border-radius: 0 12px 12px 0;
+  padding: 20px 24px;
+}
+
+/* ── ICON WRAPPER ─────────────────────────────────── */
+.icon-wrap {
+  width: 48px; height: 48px; border-radius: 12px;
+  background: rgba(44,214,104,0.12);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px; flex-shrink: 0;
+  margin-bottom: 16px;
+}
+.icon-wrap-sm {
+  width: 36px; height: 36px; border-radius: 8px;
+  background: rgba(44,214,104,0.12);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px; flex-shrink: 0;
+}
+.icon-wrap-dark {
+  background: rgba(7,64,63,0.12);
+}
+
+/* ── PRINT ────────────────────────────────────────── */
+@media print {
+  .slide { page-break-after: always; min-height: 100vh; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE 1: CAPA -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section id="slide-cover" class="slide slide-dark">
+  <div class="deco-circle deco1"></div>
+  <div class="deco-circle deco2"></div>
+
+  <!-- Logo -->
+  <div class="slide-nav">
+    <div class="hh-logo">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+        <rect x="8" y="2" width="10" height="10" rx="1" transform="rotate(45 8 2)" fill="#2CD668"/>
+        <polygon points="16,14 26,14 21,26" fill="#07403F"/>
+        <polygon points="6,14 16,14 11,26" fill="#07403F"/>
+      </svg>
+      <div class="hh-logo-text">
+        <div style="display:flex;gap:0">
+          <span class="health">Health </span>
+          <span class="hub">Hub</span>
+        </div>
+      </div>
+    </div>
+    <span class="tag tag-outline">Proposta Confidencial</span>
+  </div>
+
+  <!-- Content -->
+  <div style="max-width: 900px; margin-top: 80px;">
+    <div class="eyebrow eyebrow-green">Proposta Comercial Exclusiva — 2025</div>
+    <h1 class="text-cream" style="font-size: 72px; margin-bottom: 24px;">
+      Estruturação<br>
+      <span class="text-green">Comercial</span> e<br>
+      Governança de<br>
+      Crescimento
+    </h1>
+    <div class="divider"></div>
+    <p class="lead text-muted-dark mt-24" style="max-width: 600px;">
+      Uma proposta feita sob medida para a <strong style="color: var(--hh-cream);">Clínica Encanto</strong> — a clínica pediátrica de referência em Brasília que já tem a demanda. O que vem a seguir é a estrutura para transformá-la em crescimento previsível.
+    </p>
+  </div>
+
+  <!-- Bottom info -->
+  <div style="position: absolute; bottom: 64px; left: 80px; right: 80px; display: flex; justify-content: space-between; align-items: flex-end;">
+    <div>
+      <div style="font-size: 12px; color: rgba(247,244,227,0.35); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px;">Preparado para</div>
+      <div style="font-size: 20px; font-weight: 700; color: var(--hh-cream); letter-spacing: -0.01em;">Clínica Encanto</div>
+      <div style="font-size: 14px; color: rgba(247,244,227,0.5); margin-top: 4px;">Clínica Pediátrica · Brasília — DF</div>
+    </div>
+    <div style="text-align: right;">
+      <div style="font-size: 12px; color: rgba(247,244,227,0.35); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px;">Data</div>
+      <div style="font-size: 18px; font-weight: 600; color: var(--hh-cream);">Abril 2025</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE 2: ANTES DE QUALQUER PROPOSTA -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="slide slide-light" style="padding: 80px;">
+  <div class="slide-nav">
+    <div class="hh-logo">
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+        <rect x="8" y="2" width="10" height="10" rx="1" transform="rotate(45 8 2)" fill="#2CD668"/>
+        <polygon points="16,14 26,14 21,26" fill="#07403F"/>
+        <polygon points="6,14 16,14 11,26" fill="#07403F"/>
+      </svg>
+      <div class="hh-logo-text" style="line-height:1;">
+        <span style="font-size:16px;font-weight:700;color:var(--hh-dark);">Health</span><span style="font-size:16px;font-weight:700;color:var(--hh-green);">Hub</span>
+      </div>
+    </div>
+    <span class="tag tag-soft" style="color:var(--hh-dark);">Diagnóstico</span>
+  </div>
+
+  <div style="max-width: 780px; margin-top: 64px;">
+    <div class="eyebrow eyebrow-gray">Antes de apresentar a solução</div>
+    <h2 class="text-dark" style="margin-bottom: 24px;">Ouvimos com atenção.<br>E entendemos a realidade.</h2>
+    <div class="divider"></div>
+    <p class="lead-sm text-muted-light mt-24" style="max-width: 680px;">
+      Na reunião com as sócias fundadoras da Clínica Encanto, ficou clara uma situação que se repete nas melhores clínicas de Brasília: a demanda existe. A competência clínica é indiscutível. O que está travando o crescimento não é nenhum desses dois fatores.
+    </p>
+  </div>
+
+  <div class="grid-3 mt-48">
+    <div class="card-accent" style="background: var(--hh-dark);">
+      <div class="icon-wrap" style="background: rgba(44,214,104,0.15);">🏥</div>
+      <h5 class="text-cream mb-8">Clínica consolidada</h5>
+      <p style="font-size:14px; color: rgba(247,244,227,0.6);">Marca reconhecida, 6 sócias, agenda das fundadoras 100% ocupada com lista de espera.</p>
+    </div>
+    <div class="card-accent" style="background: var(--hh-dark);">
+      <div class="icon-wrap" style="background: rgba(44,214,104,0.15);">📊</div>
+      <h5 class="text-cream mb-8">Demanda real existe</h5>
+      <p style="font-size:14px; color: rgba(247,244,227,0.6);">Não há problema de captação de pacientes. O problema está na conversão, no aproveitamento e no controle.</p>
+    </div>
+    <div class="card-accent" style="background: var(--hh-dark);">
+      <div class="icon-wrap" style="background: rgba(44,214,104,0.15);">⚙️</div>
+      <h5 class="text-cream mb-8">Operação no escuro</h5>
+      <p style="font-size:14px; color: rgba(247,244,227,0.6);">Sem dados, sem processos padronizados, sem governança. A clínica cresce apesar da estrutura, não por causa dela.</p>
+    </div>
+  </div>
+
+  <div class="highlight-bar mt-32" style="background: rgba(44,214,104,0.08); border-left-color: var(--hh-green);">
+    <p style="font-size: 17px; font-weight: 500; color: var(--hh-dark); line-height: 1.6;">
+      <strong>Nossa análise foi precisa:</strong> a Clínica Encanto não precisa de mais marketing. Precisa de <strong>estrutura para transformar a demanda que já tem</strong> em crescimento mais rentável, mais previsível e menos dependente das sócias fundadoras.
+    </p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE 3: O VERDADEIRO PROBLEMA -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="slide slide-dark" style="padding: 80px;">
+  <div class="slide-nav">
+    <div class="hh-logo">
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+        <rect x="8" y="2" width="10" height="10" rx="1" transform="rotate(45 8 2)" fill="#2CD668"/>
+        <polygon points="16,14 26,14 21,26" fill="#07403F"/>
+        <polygon points="6,14 16,14 11,26" fill="#07403F"/>
+      </svg>
+      <div class="hh-logo-text"><span style="font-size:16px;font-weight:700;color:var(--hh-cream);">Health</span><span style="font-size:16px;font-weight:700;color:var(--hh-green);">Hub</span></div>
+    </div>
+    <span class="tag tag-outline">O Problema Real</span>
+  </div>
+
+  <div class="grid-5050 mt-40">
+    <div>
+      <div class="eyebrow eyebrow-green">A pergunta certa</div>
+      <h2 class="text-cream" style="margin-bottom: 20px;">O problema<br>não é falta<br>de paciente.</h2>
+      <div class="divider"></div>
+      <p class="lead-sm text-muted-dark mt-24">
+        A Clínica Encanto já tem demanda. As agendas das fundadoras estão cheias. Há lista de espera. Mas a clínica ainda não consegue crescer de forma organizada e previsível.
+      </p>
+      <div class="highlight-bar mt-28" style="background: rgba(44,214,104,0.08); border-color: rgba(44,214,104,0.2);">
+        <p style="font-size: 16px; font-weight: 600; color: var(--hh-cream); line-height: 1.6;">
+          "A clínica está crescendo <em style="color: var(--hh-green);">apesar</em> da falta de estrutura.<br>Imagine o que acontece quando a estrutura chega."
+        </p>
+      </div>
+    </div>
+    <div>
+      <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(247,244,227,0.35); margin-bottom: 20px;">O que está faltando hoje</div>
+      <div class="problem-item">
+        <div class="problem-icon">🔍</div>
+        <div>
+          <div style="font-size: 15px; font-weight: 600; color: var(--hh-cream); margin-bottom: 4px;">Dados e visibilidade da operação</div>
+          <div style="font-size: 13px; color: rgba(247,244,227,0.55);">Taxa de conversão, no-show, origem dos leads, retorno — tudo no escuro.</div>
+        </div>
+      </div>
+      <div class="problem-item">
+        <div class="problem-icon">🧩</div>
+        <div>
+          <div style="font-size: 15px; font-weight: 600; color: var(--hh-cream); margin-bottom: 4px;">Processo comercial estruturado</div>
+          <div style="font-size: 13px; color: rgba(247,244,227,0.55);">Cada secretária atende de um jeito. Não há script, funil nem condução ativa do lead.</div>
+        </div>
+      </div>
+      <div class="problem-item">
+        <div class="problem-icon">📋</div>
+        <div>
+          <div style="font-size: 15px; font-weight: 600; color: var(--hh-cream); margin-bottom: 4px;">Governança comercial</div>
+          <div style="font-size: 13px; color: rgba(247,244,227,0.55);">A gestora Lorena está presa no operacional. Ninguém dono do processo comercial.</div>
+        </div>
+      </div>
+      <div class="problem-item">
+        <div class="problem-icon">📈</div>
+        <div>
+          <div style="font-size: 15px; font-weight: 600; color: var(--hh-cream); margin-bottom: 4px;">Crescimento sem depender das fundadoras</div>
+          <div style="font-size: 13px; color: rgba(247,244,227,0.55);">Agenda das 3 fundadoras cheia. Como crescer sem sobrecarregá-las?</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE 4: 6 GARGALOS DA OPERAÇÃO -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="slide slide-white" style="padding: 72px 80px;">
+  <div class="slide-nav" style="position: static; margin-bottom: 40px;">
+    <div class="hh-logo">
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+        <rect x="8" y="2" width="10" height="10" rx="1" transform="rotate(45 8 2)" fill="#2CD668"/>
+        <polygon points="16,14 26,14 21,26" fill="#07403F"/>
+        <polygon points="6,14 16,14 11,26" fill="#07403F"/>
+      </svg>
+      <div class="hh-logo-text"><span style="font-size:16px;font-weight:700;color:var(--hh-dark);">Health</span><span style="font-size:16px;font-weight:700;color:var(--hh-green);">Hub</span></div>
+    </div>
+    <span class="tag tag-soft">6 Gargalos Identificados</span>
+  </div>
+
+  <div style="max-width: 600px; margin-bottom: 40px;">
+    <div class="eyebrow eyebrow-gray">O que identificamos na reunião</div>
+    <h3 class="text-dark">Os 6 pontos que estão<br>travando o crescimento</h3>
+  </div>
+
+  <div class="grid-2" style="gap: 20px;">
+    <div style="display:flex; gap:16px; align-items:flex-start; padding:20px 24px; background: var(--hh-cream); border-radius:14px; border-left: 4px solid var(--hh-green);">
+      <div style="font-size: 28px; font-weight:800; color: rgba(44,214,104,0.3); width: 40px; flex-shrink:0; line-height:1;">01</div>
+      <div>
+        <div style="font-size:15px; font-weight:700; color:var(--hh-dark); margin-bottom:6px;">CRM subutilizado</div>
+        <div style="font-size:13px; color: var(--hh-gray); line-height:1.5;">O Kommo está instalado, mas funciona só como caixa de mensagens. Sem funil, sem dashboards, sem automação, sem inteligência.</div>
+      </div>
+    </div>
+
+    <div style="display:flex; gap:16px; align-items:flex-start; padding:20px 24px; background: var(--hh-cream); border-radius:14px; border-left: 4px solid var(--hh-green);">
+      <div style="font-size: 28px; font-weight:800; color: rgba(44,214,104,0.3); width: 40px; flex-shrink:0; line-height:1;">02</div>
+      <div>
+        <div style="font-size:15px; font-weight:700; color:var(--hh-dark); margin-bottom:6px;">Secretárias sem padrão comercial</div>
+        <div style="font-size:13px; color: var(--hh-gray); line-height:1.5;">Cada uma responde de um jeito. Não há script de condução, follow-up nem pensamento de vendas. Postura reativa, não consultiva.</div>
+      </div>
+    </div>
+
+    <div style="display:flex; gap:16px; align-items:flex-start; padding:20px 24px; background: var(--hh-cream); border-radius:14px; border-left: 4px solid var(--hh-green);">
+      <div style="font-size: 28px; font-weight:800; color: rgba(44,214,104,0.3); width: 40px; flex-shrink:0; line-height:1;">03</div>
+      <div>
+        <div style="font-size:15px; font-weight:700; color:var(--hh-dark); margin-bottom:6px;">Sobrecarga operacional da equipe</div>
+        <div style="font-size:13px; color: var(--hh-gray); line-height:1.5;">Secretárias gastam energia em rotinas repetitivas e dúvidas de pacientes antigos — sobra pouco tempo para converter novos leads.</div>
+      </div>
+    </div>
+
+    <div style="display:flex; gap:16px; align-items:flex-start; padding:20px 24px; background: var(--hh-cream); border-radius:14px; border-left: 4px solid var(--hh-green);">
+      <div style="font-size: 28px; font-weight:800; color: rgba(44,214,104,0.3); width: 40px; flex-shrink:0; line-height:1;">04</div>
+      <div>
+        <div style="font-size:15px; font-weight:700; color:var(--hh-dark); margin-bottom:6px;">Retorno e lista de espera desperdiçados</div>
+        <div style="font-size:13px; color: var(--hh-gray); line-height:1.5;">Sem automação para o fluxo de retorno em 30 dias. Sem processo para preencher vagas abertas com a lista de espera.</div>
+      </div>
+    </div>
+
+    <div style="display:flex; gap:16px; align-items:flex-start; padding:20px 24px; background: var(--hh-cream); border-radius:14px; border-left: 4px solid var(--hh-green);">
+      <div style="font-size: 28px; font-weight:800; color: rgba(44,214,104,0.3); width: 40px; flex-shrink:0; line-height:1;">05</div>
+      <div>
+        <div style="font-size:15px; font-weight:700; color:var(--hh-dark); margin-bottom:6px;">Demanda concentrada nas fundadoras</div>
+        <div style="font-size:13px; color: var(--hh-gray); line-height:1.5;">Outros médicos com agenda ociosa. As secretárias não conduzem nem direcionam estrategicamente a demanda de pediatria geral.</div>
+      </div>
+    </div>
+
+    <div style="display:flex; gap:16px; align-items:flex-start; padding:20px 24px; background: var(--hh-cream); border-radius:14px; border-left: 4px solid var(--hh-green);">
+      <div style="font-size: 28px; font-weight:800; color: rgba(44,214,104,0.3); width: 40px; flex-shrink:0; line-height:1;">06</div>
+      <div>
+        <div style="font-size:15px; font-weight:700; color:var(--hh-dark); margin-bottom:6px;">Gestão presa no operacional</div>
+        <div style="font-size:13px; color: var(--hh-gray); line-height:1.5;">A Lorena tem perfil e capacidade estratégica, mas está apagando incêndio todo dia. Sem dados e sem processo, não tem como atuar de forma estratégica.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE 5: ONDE A RECEITA ESTÁ SENDO PERDIDA -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="slide slide-dark" style="padding: 80px;">
+  <div class="slide-nav">
+    <div class="hh-logo">
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+        <rect x="8" y="2" width="10" height="10" rx="1" transform="rotate(45 8 2)" fill="#2CD668"/>
+        <polygon points="16,14 26,14 21,26" fill="#07403F"/>
+        <polygon points="6,14 16,14 11,26" fill="#07403F"/>
+      </svg>
+      <div class="hh-logo-text"><span style="font-size:16px;font-weight:700;color:var(--hh-cream);">Health</span><span style="font-size:16px;font-weight:700;color:var(--hh-green);">Hub</span></div>
+    </div>
+    <span class="tag tag-outline">Impacto Financeiro</span>
+  </div>
+
+  <div style="max-width: 680px; margin-top: 40px; margin-bottom: 48px;">
+    <div class="eyebrow eyebrow-green">O custo oculto da desorganização</div>
+    <h2 class="text-cream">Onde a receita está<br>escorregando hoje</h2>
+  </div>
+
+  <div class="grid-3" style="gap: 20px; margin-bottom: 40px;">
+    <div class="card-dark" style="border-top: 3px solid var(--hh-green);">
+      <div style="font-size: 40px; margin-bottom: 12px;">🔄</div>
+      <h5 class="text-green mb-8">Retorno não capturado</h5>
+      <p style="font-size: 13px; color: rgba(247,244,227,0.6); line-height: 1.5;">Pacientes que têm direito a retorno em 30 dias e simplesmente não voltam — porque ninguém os acompanhou. Cada retorno perdido é uma consulta não realizada.</p>
+    </div>
+    <div class="card-dark" style="border-top: 3px solid var(--hh-green);">
+      <div style="font-size: 40px; margin-bottom: 12px;">📅</div>
+      <h5 class="text-green mb-8">Vagas ociosas não preenchidas</h5>
+      <p style="font-size: 13px; color: rgba(247,244,227,0.6); line-height: 1.5;">Cancelamentos e lacunas na agenda dos médicos com menor ocupação que não são preenchidos com agilidade. Lista de espera existe, mas não é usada.</p>
+    </div>
+    <div class="card-dark" style="border-top: 3px solid var(--hh-green);">
+      <div style="font-size: 40px; margin-bottom: 12px;">💬</div>
+      <h5 class="text-green mb-8">Leads não convertidos</h5>
+      <p style="font-size: 13px; color: rgba(247,244,227,0.6); line-height: 1.5;">Sem script de condução, sem follow-up, sem dados. Quantos leads chegaram este mês? Quantos foram perdidos? A clínica não sabe responder.</p>
+    </div>
+  </div>
+
+  <div style="background: rgba(44,214,104,0.06); border: 1px solid rgba(44,214,104,0.2); border-radius: 16px; padding: 32px 36px;">
+    <div class="grid-4" style="gap: 0;">
+      <div style="text-align: center; padding: 0 20px; border-right: 1px solid rgba(44,214,104,0.15);">
+        <div style="font-size: 40px; font-weight: 800; color: var(--hh-green); letter-spacing: -0.04em; line-height: 1;">?%</div>
+        <div style="font-size: 12px; color: rgba(247,244,227,0.5); margin-top: 6px;">taxa de conversão</div>
+      </div>
+      <div style="text-align: center; padding: 0 20px; border-right: 1px solid rgba(44,214,104,0.15);">
+        <div style="font-size: 40px; font-weight: 800; color: var(--hh-green); letter-spacing: -0.04em; line-height: 1;">?%</div>
+        <div style="font-size: 12px; color: rgba(247,244,227,0.5); margin-top: 6px;">taxa de retorno</div>
+      </div>
+      <div style="text-align: center; padding: 0 20px; border-right: 1px solid rgba(44,214,104,0.15);">
+        <div style="font-size: 40px; font-weight: 800; color: var(--hh-green); letter-spacing: -0.04em; line-height: 1;">?%</div>
+        <div style="font-size: 12px; color: rgba(247,244,227,0.5); margin-top: 6px;">no-show atual</div>
+      </div>
+      <div style="text-align: center; padding: 0 20px;">
+        <div style="font-size: 40px; font-weight: 800; color: var(--hh-green); letter-spacing: -0.04em; line-height: 1;">?</div>
+        <div style="font-size: 12px; color: rgba(247,244,227,0.5); margin-top: 6px;">leads por mês</div>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 20px;">
+      <p style="font-size: 14px; color: rgba(247,244,227,0.5);">A clínica não sabe responder a nenhuma dessas perguntas hoje. <strong style="color: var(--hh-cream);">Esse é o problema.</strong></p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE 6: A SOLUÇÃO (VISÃO GERAL) -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="slide" style="background: var(--hh-green); padding: 80px;">
+  <div class="slide-nav">
+    <div class="hh-logo">
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+        <rect x="8" y="2" width="10" height="10" rx="1" transform="rotate(45 8 2)" fill="#07403F"/>
+        <polygon points="16,14 26,14 21,26" fill="#07403F" opacity="0.6"/>
+        <polygon points="6,14 16,14 11,26" fill="#07403F" opacity="0.6"/>
+      </svg>
+      <div style="display:flex;gap:0;">
+        <span style="font-size:16px;font-weight:700;color:var(--hh-dark);">Health</span>
+        <span style="font-size:16px;font-weight:700;color:var(--hh-dark);">Hub</span>
+      </div>
+    </div>
+    <span class="tag" style="background: var(--hh-dark); color: var(--hh-cream);">A Solução</span>
+  </div>
+
+  <div class="grid-5050 mt-40" style="gap: 80px;">
+    <div>
+      <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(7,64,63,0.6); margin-bottom: 16px;">Nossa proposta para a Clínica Encanto</div>
+      <h2 style="color: var(--hh-dark); font-size: 48px; line-height: 1.1; margin-bottom: 24px;">
+        Não estamos<br>vendendo<br>um software.
+      </h2>
+      <div style="width: 48px; height: 4px; background: var(--hh-dark); border-radius: 4px; margin-bottom: 28px;"></div>
+      <p style="font-size: 18px; font-weight: 500; color: var(--hh-dark); line-height: 1.6;">
+        Estamos entregando a <strong>infraestrutura comercial completa</strong> que a Clínica Encanto precisa para crescer com controle, previsibilidade e sem depender cada vez mais das fundadoras.
+      </p>
+    </div>
+    <div>
+      <div style="background: var(--hh-dark); border-radius: 20px; padding: 36px;">
+        <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(247,244,227,0.35); margin-bottom: 24px;">O que entregamos</div>
+        <ul class="check-list check-list-cream">
+          <li style="color: var(--hh-cream); font-size: 15px; font-weight: 500; padding: 12px 0; border-bottom-color: rgba(44,214,104,0.12);">CRM configurado para a realidade da clínica</li>
+          <li style="color: var(--hh-cream); font-size: 15px; font-weight: 500; padding: 12px 0; border-bottom-color: rgba(44,214,104,0.12);">Processo comercial estruturado do zero</li>
+          <li style="color: var(--hh-cream); font-size: 15px; font-weight: 500; padding: 12px 0; border-bottom-color: rgba(44,214,104,0.12);">Scripts e treinamento para as secretárias</li>
+          <li style="color: var(--hh-cream); font-size: 15px; font-weight: 500; padding: 12px 0; border-bottom-color: rgba(44,214,104,0.12);">Automações operacionais (sem IA de atendimento)</li>
+          <li style="color: var(--hh-cream); font-size: 15px; font-weight: 500; padding: 12px 0; border-bottom-color: rgba(44,214,104,0.12);">Dashboards e indicadores em tempo real</li>
+          <li style="color: var(--hh-cream); font-size: 15px; font-weight: 500; padding: 12px 0; border-bottom-color: rgba(44,214,104,0.12);">Governança que garante a execução</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE 7: ESTRUTURA DO PROJETO — 2 FASES -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="slide slide-light" style="padding: 80px;">
+  <div class="slide-nav" style="position: static; margin-bottom: 40px;">
+    <div class="hh-logo">
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+        <rect x="8" y="2" width="10" height="10" rx="1" transform="rotate(45 8 2)" fill="#2CD668"/>
+        <polygon points="16,14 26,14 21,26" fill="#07403F"/>
+        <polygon points="6,14 16,14 11,26" fill="#07403F"/>
+      </svg>
+      <div class="hh-logo-text"><span style="font-size:16px;font-weight:700;color:var(--hh-dark);">Health</span><span style="font-size:16px;font-weight:700;color:var(--hh-green);">Hub</span></div>
+    </div>
+    <span class="tag tag-soft">Estrutura do Projeto</span>
+  </div>
+
+  <div style="text-align: center; max-width: 600px; margin: 0 auto 52px;">
+    <div class="eyebrow eyebrow-gray">Como trabalhamos</div>
+    <h3 class="text-dark">O projeto é estruturado<br>em duas fases</h3>
+    <p style="font-size: 15px; color: var(--hh-gray); margin-top: 16px; line-height: 1.6;">A Fase 1 é o foco imediato. A Fase 2 é o próximo passo natural depois que a base estiver funcionando.</p>
+  </div>
+
+  <div class="grid-2" style="gap: 32px; max-width: 1100px; margin: 0 auto;">
+    <!-- FASE 1 -->
+    <div style="background: var(--hh-dark); border-radius: 20px; padding: 40px; position: relative; overflow: hidden;">
+      <div style="position: absolute; top: -30px; right: -20px; font-size: 120px; font-weight: 900; color: rgba(44,214,104,0.06); line-height: 1;">01</div>
+      <div class="tag tag-green mb-24" style="position: relative;">Fase Atual</div>
+      <h3 class="text-cream" style="margin-bottom: 12px; position: relative;">Estruturação Comercial<br>e Governança</h3>
+      <p style="font-size: 14px; color: rgba(247,244,227,0.55); margin-bottom: 28px; position: relative;">Tirar a clínica da operação no escuro e estruturar a base comercial para crescer com controle.</p>
+      <div style="position: relative;">
+        <div style="display: flex; gap: 10px; align-items: center; padding: 10px 0; border-bottom: 1px solid rgba(44,214,104,0.12);">
+          <div style="width: 6px; height: 6px; border-radius: 50%; background: var(--hh-green); flex-shrink:0;"></div>
+          <span style="font-size: 14px; color: rgba(247,244,227,0.8);">Implantação completa do CRM</span>
+        </div>
+        <div style="display: flex; gap: 10px; align-items: center; padding: 10px 0; border-bottom: 1px solid rgba(44,214,104,0.12);">
+          <div style="width: 6px; height: 6px; border-radius: 50%; background: var(--hh-green); flex-shrink:0;"></div>
+          <span style="font-size: 14px; color: rgba(247,244,227,0.8);">Dashboards e indicadores</span>
+        </div>
+        <div style="display: flex; gap: 10px; align-items: center; padding: 10px 0; border-bottom: 1px solid rgba(44,214,104,0.12);">
+          <div style="width: 6px; height: 6px; border-radius: 50%; background: var(--hh-green); flex-shrink:0;"></div>
+          <span style="font-size: 14px; color: rgba(247,244,227,0.8);">Scripts comerciais completos</span>
+        </div>
+        <div style="display: flex; gap: 10px; align-items: center; padding: 10px 0; border-bottom: 1px solid rgba(44,214,104,0.12);">
+          <div style="width: 6px; height: 6px; border-radius: 50%; background: var(--hh-green); flex-shrink:0;"></div>
+          <span style="font-size: 14px; color: rgba(247,244,227,0.8);">Treinamento das secretárias</span>
+        </div>
+        <div style="display: flex; gap: 10px; align-items: center; padding: 10px 0; border-bottom: 1px solid rgba(44,214,104,0.12);">
+          <div style="width: 6px; height: 6px; border-radius: 50%; background: var(--hh-green); flex-shrink:0;"></div>
+          <span style="font-size: 14px; color: rgba(247,244,227,0.8);">Automações operacionais</span>
+        </div>
+        <div style="display: flex; gap: 10px; align-items: center; padding: 10px 0;">
+          <div style="width: 6px; height: 6px; border-radius: 50%; background: var(--hh-green); flex-shrink:0;"></div>
+          <span style="font-size: 14px; color: rgba(247,244,227,0.8);">Governança e acompanhamento</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- FASE 2 -->
+    <div style="background: white; border-radius: 20px; padding: 40px; border: 2px dashed var(--hh-gray-light); position: relative; overflow: hidden; opacity: 0.8;">
+      <div style="position: absolute; top: -30px; right: -20px; font-size: 120px; font-weight: 900; color: rgba(7,64,63,0.04); line-height: 1;">02</div>
+      <div class="tag" style="background: rgba(7,64,63,0.08); color: var(--hh-gray); font-size:9px; margin-bottom: 24px; position: relative;">Próximo Passo</div>
+      <h3 class="text-dark" style="margin-bottom: 12px; position: relative;">Evolução de Receita<br>e Protocolos</h3>
+      <p style="font-size: 14px; color: var(--hh-gray); margin-bottom: 28px; position: relative;">Aumentar a rentabilidade sem abrir mais agenda das fundadoras. A clínica evolui para um modelo mais sofisticado de crescimento.</p>
+      <div style="position: relative;">
+        <div style="display: flex; gap: 10px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--hh-gray-light);">
+          <div style="width: 6px; height: 6px; border-radius: 50%; background: var(--hh-gray-light); flex-shrink:0;"></div>
+          <span style="font-size: 14px; color: var(--hh-gray);">Estruturação de protocolos clínicos</span>
+        </div>
+        <div style="display: flex; gap: 10px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--hh-gray-light);">
+          <div style="width: 6px; height: 6px; border-radius: 50%; background: var(--hh-gray-light); flex-shrink:0;"></div>
+          <span style="font-size: 14px; color: var(--hh-gray);">Jornadas de acompanhamento</span>
+        </div>
+        <div style="display: flex; gap: 10px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--hh-gray-light);">
+          <div style="width: 6px; height: 6px; border-radius: 50%; background: var(--hh-gray-light); flex-shrink:0;"></div>
+          <span style="font-size: 14px; color: var(--hh-gray);">Aumento de ticket médio</span>
+        </div>
+        <div style="display: flex; gap: 10px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--hh-gray-light);">
+          <div style="width: 6px; height: 6px; border-radius: 50%; background: var(--hh-gray-light); flex-shrink:0;"></div>
+          <span style="font-size: 14px; color: var(--hh-gray);">Receita previsível por paciente</span>
+        </div>
+        <div style="display: flex; gap: 10px; align-items: center; padding: 10px 0;">
+          <div style="width: 6px; height: 6px; border-radius: 50%; background: var(--hh-gray-light); flex-shrink:0;"></div>
+          <span style="font-size: 14px; color: var(--hh-gray);">Evolução da esteira comercial</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE 8: FASE 1 — DETALHAMENTO COMPLETO -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="slide slide-dark" style="padding: 72px 80px;">
+  <div class="slide-nav">
+    <div class="hh-logo">
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+        <rect x="8" y="2" width="10" height="10" rx="1" transform="rotate(45 8 2)" fill="#2CD668"/>
+        <polygon points="16,14 26,14 21,26" fill="#07403F"/>
+        <polygon points="6,14 16,14 11,26" fill="#07403F"/>
+      </svg>
+      <div class="hh-logo-text"><span style="font-size:16px;font-weight:700;color:var(--hh-cream);">Health</span><span style="font-size:16px;font-weight:700;color:var(--hh-green);">Hub</span></div>
+    </div>
+    <span class="tag tag-green">Fase 1 — Detalhamento</span>
+  </div>
+
+  <div style="margin-top: 32px; margin-bottom: 40px;">
+    <div class="eyebrow eyebrow-green">O que vamos construir juntos</div>
+    <h3 class="text-cream">7 pilares da estruturação comercial</h3>
+  </div>
+
+  <div class="grid-3" style="gap: 18px;">
+    <!-- Pilar 1 -->
+    <div class="card-dark" style="padding: 24px;">
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+        <div class="num-badge num-badge-green">1</div>
+        <h5 class="text-green" style="font-size: 14px;">Implantação do CRM</h5>
+      </div>
+      <p style="font-size: 13px; color: rgba(247,244,227,0.6); line-height: 1.5;">CRM configurado especificamente para a Clínica Encanto — funil comercial, etapas do processo, dados estruturados e operação organizada para controle real.</p>
+    </div>
+
+    <!-- Pilar 2 -->
+    <div class="card-dark" style="padding: 24px;">
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+        <div class="num-badge num-badge-green">2</div>
+        <h5 class="text-green" style="font-size: 14px;">Dashboards e Indicadores</h5>
+      </div>
+      <p style="font-size: 13px; color: rgba(247,244,227,0.6); line-height: 1.5;">Conversão, tempo de resposta, follow-up, taxa de retorno, visão do funil. Dados em tempo real para a gestão tomar decisões com base em fatos.</p>
+    </div>
+
+    <!-- Pilar 3 -->
+    <div class="card-dark" style="padding: 24px;">
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+        <div class="num-badge num-badge-green">3</div>
+        <h5 class="text-green" style="font-size: 14px;">Processo Comercial</h5>
+      </div>
+      <p style="font-size: 13px; color: rgba(247,244,227,0.6); line-height: 1.5;">Desenho do processo comercial da clínica: etapas definidas, jornada do lead padronizada, regras de atendimento e acompanhamento claras.</p>
+    </div>
+
+    <!-- Pilar 4 -->
+    <div class="card-dark" style="padding: 24px;">
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+        <div class="num-badge num-badge-green">4</div>
+        <h5 class="text-green" style="font-size: 14px;">Scripts Comerciais</h5>
+      </div>
+      <p style="font-size: 13px; color: rgba(247,244,227,0.6); line-height: 1.5;">Script de atendimento, condução do lead, follow-up, confirmação e direcionamento de pediatria geral. Regras para distribuição estratégica da demanda.</p>
+    </div>
+
+    <!-- Pilar 5 -->
+    <div class="card-dark" style="padding: 24px;">
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+        <div class="num-badge num-badge-green">5</div>
+        <h5 class="text-green" style="font-size: 14px;">Treinamento da Equipe</h5>
+      </div>
+      <p style="font-size: 13px; color: rgba(247,244,227,0.6); line-height: 1.5;">Treinamento das secretárias para conduzir leads ativamente. Mudança de postura: de resposta passiva para condução consultiva e estratégica.</p>
+    </div>
+
+    <!-- Pilar 6 -->
+    <div class="card-dark" style="padding: 24px;">
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+        <div class="num-badge num-badge-green">6</div>
+        <h5 class="text-green" style="font-size: 14px;">Automações Operacionais</h5>
+      </div>
+      <p style="font-size: 13px; color: rgba(247,244,227,0.6); line-height: 1.5;">Confirmação de consulta, lembretes, fluxo de retorno em 30 dias, follow-up automático e rotina para preenchimento de vagas com lista de espera. Sem IA de atendimento.</p>
+    </div>
+  </div>
+
+  <!-- Pilar 7 — Governança (destaque especial) -->
+  <div style="margin-top: 18px; background: rgba(44,214,104,0.08); border: 1px solid rgba(44,214,104,0.25); border-radius: 16px; padding: 24px 28px; display: flex; gap: 24px; align-items: flex-start;">
+    <div class="num-badge num-badge-green" style="width: 44px; height: 44px; font-size: 16px; flex-shrink: 0;">7</div>
+    <div>
+      <h5 class="text-green" style="font-size: 15px; margin-bottom: 8px;">Governança Comercial — o diferencial que garante a execução</h5>
+      <p style="font-size: 13px; color: rgba(247,244,227,0.65); line-height: 1.6;">Acompanhamento contínuo da operação, leitura de dados, monitoramento da execução, ajustes e apoio direto à Lorena. Não basta estruturar — <strong style="color: var(--hh-cream);">nosso trabalho é garantir que o processo implementado realmente aconteça.</strong> Isso é o que separa uma implantação que funciona de uma que fica no PowerPoint.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE 9: O PAPEL DA LORENA -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="slide slide-white" style="padding: 80px;">
+  <div class="slide-nav" style="position: static; margin-bottom: 48px;">
+    <div class="hh-logo">
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+        <rect x="8" y="2" width="10" height="10" rx="1" transform="rotate(45 8 2)" fill="#2CD668"/>
+        <polygon points="16,14 26,14 21,26" fill="#07403F"/>
+        <polygon points="6,14 16,14 11,26" fill="#07403F"/>
+      </svg>
+      <div class="hh-logo-text"><span style="font-size:16px;font-weight:700;color:var(--hh-dark);">Health</span><span style="font-size:16px;font-weight:700;color:var(--hh-green);">Hub</span></div>
+    </div>
+    <span class="tag tag-soft">Governança Interna</span>
+  </div>
+
+  <div class="grid-5050" style="gap: 80px; align-items: center;">
+    <div>
+      <div class="eyebrow eyebrow-gray">Um ponto essencial</div>
+      <h2 class="text-dark" style="margin-bottom: 24px;">Nosso trabalho<br>fortalece a<br><span class="text-green">Lorena.</span></h2>
+      <div class="divider"></div>
+      <p class="lead-sm text-muted-light mt-24">
+        Existe uma ideia equivocada que precisa ser desmontada: a de que contratar suporte externo vai tirar o protagonismo da gestão interna.
+      </p>
+      <p style="font-size: 16px; color: var(--hh-gray); margin-top: 16px; line-height: 1.6;">
+        Na verdade, é o oposto. A Lorena tem o perfil certo. Tem capacidade estratégica. O que falta é o <strong style="color: var(--hh-dark);">processo, os dados e a estrutura</strong> que permitam que ela saia do operacional e exerça o papel que a clínica precisa.
+      </p>
+    </div>
+    <div>
+      <div style="background: var(--hh-cream); border-radius: 20px; padding: 36px;">
+        <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--hh-gray); margin-bottom: 24px;">A transformação do papel da Lorena</div>
+
+        <div style="display: flex; gap: 20px; margin-bottom: 20px;">
+          <div style="flex: 1; background: white; border-radius: 12px; padding: 20px; border: 1px solid var(--hh-gray-light);">
+            <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.1em; color: var(--hh-gray); text-transform: uppercase; margin-bottom: 12px;">Hoje</div>
+            <ul style="list-style: none; font-size: 13px; color: var(--hh-gray);">
+              <li style="padding: 6px 0; border-bottom: 1px solid var(--hh-gray-light);">❌ Apagando incêndio</li>
+              <li style="padding: 6px 0; border-bottom: 1px solid var(--hh-gray-light);">❌ Presa no operacional</li>
+              <li style="padding: 6px 0; border-bottom: 1px solid var(--hh-gray-light);">❌ Sem dados para decidir</li>
+              <li style="padding: 6px 0; border-bottom: 1px solid var(--hh-gray-light);">❌ Sem processo definido</li>
+              <li style="padding: 6px 0;">❌ Sem visão estratégica</li>
+            </ul>
+          </div>
+          <div style="flex: 1; background: var(--hh-dark); border-radius: 12px; padding: 20px;">
+            <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.1em; color: rgba(44,214,104,0.6); text-transform: uppercase; margin-bottom: 12px;">Com a estrutura</div>
+            <ul style="list-style: none; font-size: 13px; color: rgba(247,244,227,0.8);">
+              <li style="padding: 6px 0; border-bottom: 1px solid rgba(44,214,104,0.12);">✅ Gestora do processo</li>
+              <li style="padding: 6px 0; border-bottom: 1px solid rgba(44,214,104,0.12);">✅ Atuação estratégica</li>
+              <li style="padding: 6px 0; border-bottom: 1px solid rgba(44,214,104,0.12);">✅ Dados em tempo real</li>
+              <li style="padding: 6px 0; border-bottom: 1px solid rgba(44,214,104,0.12);">✅ Processo documentado</li>
+              <li style="padding: 6px 0;">✅ Parceira da gestão</li>
+            </ul>
+          </div>
+        </div>
+
+        <div style="background: rgba(44,214,104,0.1); border-left: 3px solid var(--hh-green); border-radius: 0 8px 8px 0; padding: 14px 16px; margin-top: 4px;">
+          <p style="font-size: 13px; color: var(--hh-dark); font-weight: 500; line-height: 1.5;">Não substituímos a Lorena. Damos a ela as condições para finalmente exercer o papel estratégico que a clínica precisa.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE 10: CRESCIMENTO SEM AS FUNDADORAS -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="slide slide-dark" style="padding: 80px;">
+  <div class="slide-nav">
+    <div class="hh-logo">
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+        <rect x="8" y="2" width="10" height="10" rx="1" transform="rotate(45 8 2)" fill="#2CD668"/>
+        <polygon points="16,14 26,14 21,26" fill="#07403F"/>
+        <polygon points="6,14 16,14 11,26" fill="#07403F"/>
+      </svg>
+      <div class="hh-logo-text"><span style="font-size:16px;font-weight:700;color:var(--hh-cream);">Health</span><span style="font-size:16px;font-weight:700;color:var(--hh-green);">Hub</span></div>
+    </div>
+    <span class="tag tag-outline">Crescimento Estratégico</span>
+  </div>
+
+  <div style="max-width: 700px; margin-top: 40px; margin-bottom: 48px;">
+    <div class="eyebrow eyebrow-green">A grande questão das fundadoras</div>
+    <h2 class="text-cream" style="line-height: 1.1;">Como crescer sem<br>abrir mais agenda?</h2>
+    <div class="divider"></div>
+    <p class="lead-sm text-muted-dark mt-20">
+      As agendas das 3 fundadoras estão cheias. O crescimento não pode depender delas. A boa notícia: ele não precisa.
+    </p>
+  </div>
+
+  <div class="grid-3" style="gap: 20px;">
+    <div style="background: rgba(44,214,104,0.06); border: 1px solid rgba(44,214,104,0.15); border-radius: 16px; padding: 28px;">
+      <div style="font-size: 32px; margin-bottom: 16px;">👨‍⚕️</div>
+      <h5 class="text-green mb-8">Melhor uso dos outros médicos</h5>
+      <p style="font-size: 13px; color: rgba(247,244,227,0.6); line-height: 1.5;">Com scripts de direcionamento e processo estruturado, as secretárias passam a conduzir a demanda de pediatria geral de forma estratégica, distribuindo para médicos com agenda ociosa.</p>
+    </div>
+    <div style="background: rgba(44,214,104,0.06); border: 1px solid rgba(44,214,104,0.15); border-radius: 16px; padding: 28px;">
+      <div style="font-size: 32px; margin-bottom: 16px;">🔁</div>
+      <h5 class="text-green mb-8">Captura de retorno</h5>
+      <p style="font-size: 13px; color: rgba(247,244,227,0.6); line-height: 1.5;">Automação do fluxo de retorno em 30 dias garante que pacientes que já são da clínica voltem sem esforço da equipe — receita recorrente sem novos leads.</p>
+    </div>
+    <div style="background: rgba(44,214,104,0.06); border: 1px solid rgba(44,214,104,0.15); border-radius: 16px; padding: 28px;">
+      <div style="font-size: 32px; margin-bottom: 16px;">📋</div>
+      <h5 class="text-green mb-8">Lista de espera ativada</h5>
+      <p style="font-size: 13px; color: rgba(247,244,227,0.6); line-height: 1.5;">Qualquer vaga que abra é preenchida com agilidade. A lista de espera passa a ser um ativo gerenciado — não uma fila sem controle.</p>
+    </div>
+  </div>
+
+  <div style="margin-top: 24px; background: rgba(255,255,255,0.04); border-radius: 16px; padding: 28px 32px; display: flex; gap: 48px; align-items: center;">
+    <div style="flex: 1;">
+      <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(247,244,227,0.35); margin-bottom: 8px;">O resultado</div>
+      <p style="font-size: 17px; font-weight: 500; color: var(--hh-cream); line-height: 1.6;">A clínica cresce como <strong style="color: var(--hh-green);">marca</strong>, não apenas pelos nomes das fundadoras. A operação se torna escalável — independente de quem está na ponta.</p>
+    </div>
+    <div style="flex-shrink: 0; text-align: center; padding: 24px 36px; background: rgba(44,214,104,0.1); border-radius: 14px; border: 1px solid rgba(44,214,104,0.2);">
+      <div style="font-size: 42px; font-weight: 800; color: var(--hh-green); letter-spacing: -0.04em; line-height: 1;">+</div>
+      <div style="font-size: 13px; color: rgba(247,244,227,0.6); margin-top: 6px; line-height: 1.4;">Receita sem<br>abrir mais<br>agenda</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE 11: FASE 2 — EVOLUÇÃO FUTURA -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="slide slide-light" style="padding: 80px;">
+  <div class="slide-nav" style="position: static; margin-bottom: 48px;">
+    <div class="hh-logo">
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+        <rect x="8" y="2" width="10" height="10" rx="1" transform="rotate(45 8 2)" fill="#2CD668"/>
+        <polygon points="16,14 26,14 21,26" fill="#07403F"/>
+        <polygon points="6,14 16,14 11,26" fill="#07403F"/>
+      </svg>
+      <div class="hh-logo-text"><span style="font-size:16px;font-weight:700;color:var(--hh-dark);">Health</span><span style="font-size:16px;font-weight:700;color:var(--hh-green);">Hub</span></div>
+    </div>
+    <span class="tag" style="background: rgba(7,64,63,0.08); color: var(--hh-gray);">Visão de Futuro</span>
+  </div>
+
+  <div class="grid-5050" style="gap: 64px; align-items: center;">
+    <div>
+      <div class="eyebrow eyebrow-gray">O próximo passo natural</div>
+      <h2 class="text-dark" style="margin-bottom: 20px;">Fase 2:<br>De consulta<br>a contínuidade.</h2>
+      <div class="divider"></div>
+      <p class="lead-sm text-muted-light mt-24">
+        Quando a base comercial estiver funcionando, a clínica estará pronta para o próximo salto: sair do modelo consulta-a-consulta para uma lógica de crescimento muito mais rentável e previsível.
+      </p>
+      <p style="font-size: 15px; color: var(--hh-gray); margin-top: 16px; line-height: 1.6;">
+        Hoje, a receita depende de agenda. Na Fase 2, ela passa a depender de <strong style="color: var(--hh-dark);">relacionamento, protocolos e jornadas</strong> — um modelo muito mais robusto.
+      </p>
+      <div style="background: rgba(7,64,63,0.05); border: 1px solid var(--hh-gray-light); border-radius: 12px; padding: 16px 20px; margin-top: 24px;">
+        <p style="font-size: 14px; color: var(--hh-gray); font-style: italic; line-height: 1.5;">"Mas isso é para depois. Agora, o foco é garantir que a base funcione."</p>
+      </div>
+    </div>
+    <div>
+      <div style="background: var(--hh-dark); border-radius: 20px; padding: 36px;">
+        <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(44,214,104,0.5); margin-bottom: 28px;">O que a Fase 2 traz</div>
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <div style="display: flex; gap: 14px; align-items: flex-start;">
+            <div style="width: 8px; height: 8px; border-radius: 50%; background: var(--hh-green); flex-shrink: 0; margin-top: 5px;"></div>
+            <div>
+              <div style="font-size: 14px; font-weight: 600; color: var(--hh-cream); margin-bottom: 4px;">Protocolos clínicos estruturados</div>
+              <div style="font-size: 12px; color: rgba(247,244,227,0.5);">Rotas de cuidado que aumentam o tempo de vida do paciente na clínica.</div>
+            </div>
+          </div>
+          <div style="display: flex; gap: 14px; align-items: flex-start;">
+            <div style="width: 8px; height: 8px; border-radius: 50%; background: var(--hh-green); flex-shrink: 0; margin-top: 5px;"></div>
+            <div>
+              <div style="font-size: 14px; font-weight: 600; color: var(--hh-cream); margin-bottom: 4px;">Jornadas de acompanhamento</div>
+              <div style="font-size: 12px; color: rgba(247,244,227,0.5);">O paciente não vem só quando está doente — ele tem um acompanhamento contínuo.</div>
+            </div>
+          </div>
+          <div style="display: flex; gap: 14px; align-items: flex-start;">
+            <div style="width: 8px; height: 8px; border-radius: 50%; background: var(--hh-green); flex-shrink: 0; margin-top: 5px;"></div>
+            <div>
+              <div style="font-size: 14px; font-weight: 600; color: var(--hh-cream); margin-bottom: 4px;">Aumento de ticket médio</div>
+              <div style="font-size: 12px; color: rgba(247,244,227,0.5);">Mais receita por paciente, sem precisar de mais pacientes.</div>
+            </div>
+          </div>
+          <div style="display: flex; gap: 14px; align-items: flex-start;">
+            <div style="width: 8px; height: 8px; border-radius: 50%; background: var(--hh-green); flex-shrink: 0; margin-top: 5px;"></div>
+            <div>
+              <div style="font-size: 14px; font-weight: 600; color: var(--hh-cream); margin-bottom: 4px;">Receita previsível e recorrente</div>
+              <div style="font-size: 12px; color: rgba(247,244,227,0.5);">Do modelo imprevisível de agenda para um faturamento com muito mais previsibilidade.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE 12: NOSSOS DIFERENCIAIS -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="slide slide-dark" style="padding: 80px;">
+  <div class="slide-nav">
+    <div class="hh-logo">
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+        <rect x="8" y="2" width="10" height="10" rx="1" transform="rotate(45 8 2)" fill="#2CD668"/>
+        <polygon points="16,14 26,14 21,26" fill="#07403F"/>
+        <polygon points="6,14 16,14 11,26" fill="#07403F"/>
+      </svg>
+      <div class="hh-logo-text"><span style="font-size:16px;font-weight:700;color:var(--hh-cream);">Health</span><span style="font-size:16px;font-weight:700;color:var(--hh-green);">Hub</span></div>
+    </div>
+    <span class="tag tag-outline">Por que a Health Hub</span>
+  </div>
+
+  <div style="max-width: 640px; margin-top: 40px; margin-bottom: 48px;">
+    <div class="eyebrow eyebrow-green">O que nos diferencia</div>
+    <h2 class="text-cream" style="font-size: 40px;">Não entregamos ferramenta.<br>Entregamos resultado.</h2>
+  </div>
+
+  <div class="grid-2" style="gap: 20px; max-width: 1060px;">
+    <div style="display:flex; gap: 16px; padding: 22px 24px; background: rgba(255,255,255,0.04); border: 1px solid rgba(44,214,104,0.12); border-radius: 14px; align-items: flex-start;">
+      <div style="font-size: 28px; flex-shrink: 0;">🎯</div>
+      <div>
+        <div style="font-size: 14px; font-weight: 700; color: var(--hh-green); margin-bottom: 6px;">Implantação feita sob medida</div>
+        <div style="font-size: 13px; color: rgba(247,244,227,0.6); line-height: 1.5;">Não é uma instalação genérica de software. É uma configuração completa adaptada ao fluxo real, linguagem e realidade da Clínica Encanto.</div>
+      </div>
+    </div>
+
+    <div style="display:flex; gap: 16px; padding: 22px 24px; background: rgba(255,255,255,0.04); border: 1px solid rgba(44,214,104,0.12); border-radius: 14px; align-items: flex-start;">
+      <div style="font-size: 28px; flex-shrink: 0;">📐</div>
+      <div>
+        <div style="font-size: 14px; font-weight: 700; color: var(--hh-green); margin-bottom: 6px;">Processo + treinamento + governança</div>
+        <div style="font-size: 13px; color: rgba(247,244,227,0.6); line-height: 1.5;">Entregamos o processo estruturado, treinamos a equipe para executá-lo e acompanhamos para garantir que aconteça. Os três pilares juntos.</div>
+      </div>
+    </div>
+
+    <div style="display:flex; gap: 16px; padding: 22px 24px; background: rgba(255,255,255,0.04); border: 1px solid rgba(44,214,104,0.12); border-radius: 14px; align-items: flex-start;">
+      <div style="font-size: 28px; flex-shrink: 0;">📊</div>
+      <div>
+        <div style="font-size: 14px; font-weight: 700; color: var(--hh-green); margin-bottom: 6px;">Visão estratégica, não técnica</div>
+        <div style="font-size: 13px; color: rgba(247,244,227,0.6); line-height: 1.5;">Falamos em crescimento, rentabilidade e controle. Não em software. O CRM é o meio — o objetivo é o resultado comercial da clínica.</div>
+      </div>
+    </div>
+
+    <div style="display:flex; gap: 16px; padding: 22px 24px; background: rgba(255,255,255,0.04); border: 1px solid rgba(44,214,104,0.12); border-radius: 14px; align-items: flex-start;">
+      <div style="font-size: 28px; flex-shrink: 0;">🔬</div>
+      <div>
+        <div style="font-size: 14px; font-weight: 700; color: var(--hh-green); margin-bottom: 6px;">Especialistas em saúde</div>
+        <div style="font-size: 13px; color: rgba(247,244,227,0.6); line-height: 1.5;">Nossa atuação é exclusiva no setor de saúde. Entendemos o fluxo de uma clínica, o perfil das equipes e as particularidades da jornada do paciente.</div>
+      </div>
+    </div>
+
+    <div style="display:flex; gap: 16px; padding: 22px 24px; background: rgba(255,255,255,0.04); border: 1px solid rgba(44,214,104,0.12); border-radius: 14px; align-items: flex-start;">
+      <div style="font-size: 28px; flex-shrink: 0;">🚀</div>
+      <div>
+        <div style="font-size: 14px; font-weight: 700; color: var(--hh-green); margin-bottom: 6px;">Transformamos demanda em receita</div>
+        <div style="font-size: 13px; color: rgba(247,244,227,0.6); line-height: 1.5;">Atuamos onde a clínica já tem potencial — otimizando o que já existe antes de qualquer investimento em captação.</div>
+      </div>
+    </div>
+
+    <div style="display:flex; gap: 16px; padding: 22px 24px; background: rgba(255,255,255,0.04); border: 1px solid rgba(44,214,104,0.12); border-radius: 14px; align-items: flex-start;">
+      <div style="font-size: 28px; flex-shrink: 0;">🔗</div>
+      <div>
+        <div style="font-size: 14px; font-weight: 700; color: var(--hh-green); margin-bottom: 6px;">Preparação para a Fase 2</div>
+        <div style="font-size: 13px; color: rgba(247,244,227,0.6); line-height: 1.5;">Cada decisão da Fase 1 é tomada pensando na evolução futura. A base é construída para crescer — não para ser refeita do zero.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE 13: SOBRE O INVESTIMENTO (OBJEÇÃO CUSTO FIXO) -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="slide slide-white" style="padding: 80px;">
+  <div class="slide-nav" style="position: static; margin-bottom: 48px;">
+    <div class="hh-logo">
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+        <rect x="8" y="2" width="10" height="10" rx="1" transform="rotate(45 8 2)" fill="#2CD668"/>
+        <polygon points="16,14 26,14 21,26" fill="#07403F"/>
+        <polygon points="6,14 16,14 11,26" fill="#07403F"/>
+      </svg>
+      <div class="hh-logo-text"><span style="font-size:16px;font-weight:700;color:var(--hh-dark);">Health</span><span style="font-size:16px;font-weight:700;color:var(--hh-green);">Hub</span></div>
+    </div>
+    <span class="tag tag-soft">Uma reflexão importante</span>
+  </div>
+
+  <div class="grid-4060" style="gap: 80px; align-items: center;">
+    <div>
+      <div class="eyebrow eyebrow-gray">Antes do número</div>
+      <h3 class="text-dark" style="margin-bottom: 20px;">Custo fixo ou<br>investimento em<br>estrutura?</h3>
+      <div class="divider"></div>
+      <p style="font-size: 15px; color: var(--hh-gray); margin-top: 24px; line-height: 1.7;">
+        Toda clínica que tenta crescer sem estrutura chega no mesmo ponto: contrata mais gente, aumenta o custo fixo e mantém o mesmo nível de desorganização — só que maior e mais caro.
+      </p>
+      <p style="font-size: 15px; color: var(--hh-gray); margin-top: 16px; line-height: 1.7;">
+        A pergunta certa não é: <em>"esse valor é alto?"</em><br>A pergunta certa é: <strong style="color: var(--hh-dark);">"quanto custa continuar do jeito que está?"</strong>
+      </p>
+    </div>
+    <div>
+      <div style="background: var(--hh-cream); border-radius: 20px; padding: 36px;">
+        <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--hh-gray); margin-bottom: 28px;">A comparação real</div>
+
+        <div style="background: white; border: 1px solid var(--hh-gray-light); border-radius: 12px; padding: 20px; margin-bottom: 16px;">
+          <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--hh-gray); margin-bottom: 12px;">Contratar mais um funcionário</div>
+          <ul style="list-style: none; font-size: 13px; color: var(--hh-gray);">
+            <li style="padding: 5px 0; border-bottom: 1px solid var(--hh-gray-light); display: flex; gap: 8px; align-items: center;">❌ <span>Custo recorrente sem fim</span></li>
+            <li style="padding: 5px 0; border-bottom: 1px solid var(--hh-gray-light); display: flex; gap: 8px; align-items: center;">❌ <span>Mais gente no mesmo processo quebrado</span></li>
+            <li style="padding: 5px 0; border-bottom: 1px solid var(--hh-gray-light); display: flex; gap: 8px; align-items: center;">❌ <span>Sem dados, sem controle</span></li>
+            <li style="padding: 5px 0; display: flex; gap: 8px; align-items: center;">❌ <span>Não resolve o problema estrutural</span></li>
+          </ul>
+        </div>
+
+        <div style="background: var(--hh-dark); border-radius: 12px; padding: 20px;">
+          <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(44,214,104,0.6); margin-bottom: 12px;">Health Hub — Fase 1</div>
+          <ul style="list-style: none; font-size: 13px; color: rgba(247,244,227,0.8);">
+            <li style="padding: 5px 0; border-bottom: 1px solid rgba(44,214,104,0.12); display: flex; gap: 8px; align-items: center;">✅ <span>Automatiza rotinas manuais</span></li>
+            <li style="padding: 5px 0; border-bottom: 1px solid rgba(44,214,104,0.12); display: flex; gap: 8px; align-items: center;">✅ <span>Aumenta produtividade da equipe atual</span></li>
+            <li style="padding: 5px 0; border-bottom: 1px solid rgba(44,214,104,0.12); display: flex; gap: 8px; align-items: center;">✅ <span>Dados reais para gestão</span></li>
+            <li style="padding: 5px 0; display: flex; gap: 8px; align-items: center;">✅ <span>Resolve o problema na raiz</span></li>
+          </ul>
+        </div>
+
+        <div style="margin-top: 20px; padding: 14px 16px; background: rgba(44,214,104,0.1); border-left: 3px solid var(--hh-green); border-radius: 0 8px 8px 0;">
+          <p style="font-size: 13px; color: var(--hh-dark); font-weight: 500; line-height: 1.5;">Antes de crescer contratando, faz muito mais sentido estruturar a operação que já existe.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE 14: INVESTIMENTO -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="slide slide-dark" style="padding: 80px;">
+  <div class="slide-nav">
+    <div class="hh-logo">
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+        <rect x="8" y="2" width="10" height="10" rx="1" transform="rotate(45 8 2)" fill="#2CD668"/>
+        <polygon points="16,14 26,14 21,26" fill="#07403F"/>
+        <polygon points="6,14 16,14 11,26" fill="#07403F"/>
+      </svg>
+      <div class="hh-logo-text"><span style="font-size:16px;font-weight:700;color:var(--hh-cream);">Health</span><span style="font-size:16px;font-weight:700;color:var(--hh-green);">Hub</span></div>
+    </div>
+    <span class="tag tag-green">Investimento</span>
+  </div>
+
+  <div style="max-width: 640px; margin-top: 40px; margin-bottom: 52px;">
+    <div class="eyebrow eyebrow-green">A proposta</div>
+    <h2 class="text-cream">Implantação robusta<br>+ governança<br>por prazo definido.</h2>
+  </div>
+
+  <div class="grid-2" style="gap: 32px; max-width: 900px;">
+    <!-- Implantação -->
+    <div style="background: var(--hh-green); border-radius: 20px; padding: 40px;">
+      <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: rgba(7,64,63,0.6); margin-bottom: 20px;">Fase 1 — Implantação</div>
+      <div style="font-size: 52px; font-weight: 800; color: var(--hh-dark); letter-spacing: -0.04em; line-height: 1; margin-bottom: 8px;">R$ 20.000</div>
+      <div style="font-size: 13px; color: rgba(7,64,63,0.6); margin-bottom: 28px;">Pagamento único</div>
+      <div style="height: 1px; background: rgba(7,64,63,0.15); margin-bottom: 24px;"></div>
+      <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(7,64,63,0.55); margin-bottom: 16px;">O que inclui</div>
+      <ul style="list-style: none; font-size: 14px;">
+        <li style="padding: 8px 0; border-bottom: 1px solid rgba(7,64,63,0.1); display: flex; gap: 10px; color: var(--hh-dark); font-weight: 500;">
+          <span style="color: var(--hh-dark);">→</span> CRM configurado para a clínica
+        </li>
+        <li style="padding: 8px 0; border-bottom: 1px solid rgba(7,64,63,0.1); display: flex; gap: 10px; color: var(--hh-dark); font-weight: 500;">
+          <span>→</span> Processo comercial estruturado
+        </li>
+        <li style="padding: 8px 0; border-bottom: 1px solid rgba(7,64,63,0.1); display: flex; gap: 10px; color: var(--hh-dark); font-weight: 500;">
+          <span>→</span> Scripts de atendimento e condução
+        </li>
+        <li style="padding: 8px 0; border-bottom: 1px solid rgba(7,64,63,0.1); display: flex; gap: 10px; color: var(--hh-dark); font-weight: 500;">
+          <span>→</span> Treinamento das secretárias
+        </li>
+        <li style="padding: 8px 0; border-bottom: 1px solid rgba(7,64,63,0.1); display: flex; gap: 10px; color: var(--hh-dark); font-weight: 500;">
+          <span>→</span> Automações operacionais
+        </li>
+        <li style="padding: 8px 0; display: flex; gap: 10px; color: var(--hh-dark); font-weight: 500;">
+          <span>→</span> Dashboards e indicadores
+        </li>
+      </ul>
+    </div>
+
+    <!-- Governança -->
+    <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(44,214,104,0.2); border-radius: 20px; padding: 40px;">
+      <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: rgba(44,214,104,0.5); margin-bottom: 20px;">Governança Mensal</div>
+      <div style="font-size: 52px; font-weight: 800; color: var(--hh-cream); letter-spacing: -0.04em; line-height: 1; margin-bottom: 8px;">R$ 3.500</div>
+      <div style="font-size: 13px; color: rgba(247,244,227,0.45); margin-bottom: 28px;">Por mês · prazo definido</div>
+      <div style="height: 1px; background: rgba(44,214,104,0.15); margin-bottom: 24px;"></div>
+      <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(247,244,227,0.3); margin-bottom: 16px;">O que inclui</div>
+      <ul style="list-style: none; font-size: 14px;">
+        <li style="padding: 8px 0; border-bottom: 1px solid rgba(44,214,104,0.1); display: flex; gap: 10px; color: rgba(247,244,227,0.8); font-weight: 500;">
+          <span style="color: var(--hh-green);">→</span> Acompanhamento da operação
+        </li>
+        <li style="padding: 8px 0; border-bottom: 1px solid rgba(44,214,104,0.1); display: flex; gap: 10px; color: rgba(247,244,227,0.8); font-weight: 500;">
+          <span style="color: var(--hh-green);">→</span> Leitura e análise dos dados
+        </li>
+        <li style="padding: 8px 0; border-bottom: 1px solid rgba(44,214,104,0.1); display: flex; gap: 10px; color: rgba(247,244,227,0.8); font-weight: 500;">
+          <span style="color: var(--hh-green);">→</span> Ajustes contínuos de processo
+        </li>
+        <li style="padding: 8px 0; border-bottom: 1px solid rgba(44,214,104,0.1); display: flex; gap: 10px; color: rgba(247,244,227,0.8); font-weight: 500;">
+          <span style="color: var(--hh-green);">→</span> Apoio estratégico à Lorena
+        </li>
+        <li style="padding: 8px 0; border-bottom: 1px solid rgba(44,214,104,0.1); display: flex; gap: 10px; color: rgba(247,244,227,0.8); font-weight: 500;">
+          <span style="color: var(--hh-green);">→</span> Monitoramento da execução
+        </li>
+        <li style="padding: 8px 0; display: flex; gap: 10px; color: rgba(247,244,227,0.8); font-weight: 500;">
+          <span style="color: var(--hh-green);">→</span> Relatórios periódicos de gestão
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="max-width: 900px; margin-top: 24px; background: rgba(44,214,104,0.06); border: 1px solid rgba(44,214,104,0.15); border-radius: 14px; padding: 20px 28px;">
+    <p style="font-size: 14px; color: rgba(247,244,227,0.65); line-height: 1.6;">
+      <strong style="color: var(--hh-cream);">Importante:</strong> a governança mensal não é uma mensalidade eterna. É um acompanhamento intensivo por um período definido — necessário para garantir que a mudança seja real, que os dados sejam lidos e que o processo se torne rotina da clínica.
+    </p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE 15: PRÓXIMOS PASSOS / CTA FINAL -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="slide" style="background: var(--hh-dark); padding: 80px; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden;">
+  <div style="position: absolute; right: -100px; top: -100px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(44,214,104,0.1) 0%, transparent 60%); pointer-events:none;"></div>
+  <div style="position: absolute; left: -80px; bottom: -80px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(44,214,104,0.06) 0%, transparent 60%); pointer-events:none;"></div>
+
+  <div class="slide-nav">
+    <div class="hh-logo">
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+        <rect x="8" y="2" width="10" height="10" rx="1" transform="rotate(45 8 2)" fill="#2CD668"/>
+        <polygon points="16,14 26,14 21,26" fill="#07403F"/>
+        <polygon points="6,14 16,14 11,26" fill="#07403F"/>
+      </svg>
+      <div class="hh-logo-text"><span style="font-size:16px;font-weight:700;color:var(--hh-cream);">Health</span><span style="font-size:16px;font-weight:700;color:var(--hh-green);">Hub</span></div>
+    </div>
+    <span class="tag tag-outline">Próximos Passos</span>
+  </div>
+
+  <div class="grid-5050" style="gap: 80px; margin-top: 40px; align-items: center; position: relative; z-index: 1;">
+    <div>
+      <div class="eyebrow eyebrow-green">O que vem agora</div>
+      <h2 class="text-cream" style="font-size: 48px; margin-bottom: 24px;">A Clínica Encanto<br>já tem tudo para<br><span class="text-green">crescer melhor.</span></h2>
+      <div class="divider"></div>
+      <p class="lead-sm text-muted-dark mt-24">
+        O que falta é dar um passo deliberado em direção à estrutura. Não um passo enorme — um passo certo.
+      </p>
+      <p style="font-size: 16px; color: rgba(247,244,227,0.55); margin-top: 16px; line-height: 1.6;">
+        Já ouvimos, já entendemos, já desenhamos a solução. Agora é uma decisão de liderança: continuar crescendo no improviso ou estruturar para crescer com controle.
+      </p>
+    </div>
+
+    <div>
+      <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(44,214,104,0.5); margin-bottom: 24px;">Como avançamos</div>
+      <div style="display: flex; flex-direction: column; gap: 0;">
+        <div style="display: flex; gap: 16px; align-items: flex-start; padding: 20px 0; border-bottom: 1px solid rgba(44,214,104,0.12);">
+          <div class="num-badge num-badge-green" style="flex-shrink:0;">1</div>
+          <div>
+            <div style="font-size: 15px; font-weight: 600; color: var(--hh-cream); margin-bottom: 4px;">Alinhamento da proposta</div>
+            <div style="font-size: 13px; color: rgba(247,244,227,0.5);">Revisão dos detalhes com as sócias, validação do escopo e ajustes necessários.</div>
+          </div>
+        </div>
+        <div style="display: flex; gap: 16px; align-items: flex-start; padding: 20px 0; border-bottom: 1px solid rgba(44,214,104,0.12);">
+          <div class="num-badge num-badge-green" style="flex-shrink:0;">2</div>
+          <div>
+            <div style="font-size: 15px; font-weight: 600; color: var(--hh-cream); margin-bottom: 4px;">Assinatura e kick-off</div>
+            <div style="font-size: 13px; color: rgba(247,244,227,0.5);">Definição de datas, apresentação das ferramentas e início da fase de imersão no processo da clínica.</div>
+          </div>
+        </div>
+        <div style="display: flex; gap: 16px; align-items: flex-start; padding: 20px 0; border-bottom: 1px solid rgba(44,214,104,0.12);">
+          <div class="num-badge num-badge-green" style="flex-shrink:0;">3</div>
+          <div>
+            <div style="font-size: 15px; font-weight: 600; color: var(--hh-cream); margin-bottom: 4px;">Imersão e diagnóstico aprofundado</div>
+            <div style="font-size: 13px; color: rgba(247,244,227,0.5);">Mapeamento do processo atual, entendimento das equipes e definição do modelo ideal para a Clínica Encanto.</div>
+          </div>
+        </div>
+        <div style="display: flex; gap: 16px; align-items: flex-start; padding: 20px 0;">
+          <div class="num-badge num-badge-green" style="flex-shrink:0;">4</div>
+          <div>
+            <div style="font-size: 15px; font-weight: 600; color: var(--hh-cream); margin-bottom: 4px;">Entrega e ativação</div>
+            <div style="font-size: 13px; color: rgba(247,244,227,0.5);">CRM configurado, automações ativas, equipe treinada e governança rodando.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE FINAL: ENCERRAMENTO -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="slide" style="background: #0a0a0a; padding: 80px; min-height: 60vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; overflow: hidden;">
+  <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 800px; height: 800px; background: radial-gradient(circle, rgba(44,214,104,0.06) 0%, transparent 65%); pointer-events:none;"></div>
+
+  <div style="position: relative; z-index: 1;">
+    <!-- Logo grande -->
+    <div style="display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 40px;">
+      <svg width="48" height="48" viewBox="0 0 32 32" fill="none">
+        <rect x="8" y="2" width="10" height="10" rx="1" transform="rotate(45 8 2)" fill="#2CD668"/>
+        <polygon points="16,14 26,14 21,26" fill="#2CD668" opacity="0.5"/>
+        <polygon points="6,14 16,14 11,26" fill="#2CD668" opacity="0.5"/>
+      </svg>
+      <div>
+        <span style="font-size: 28px; font-weight: 700; color: #ffffff; letter-spacing: -0.02em;">Health</span>
+        <span style="font-size: 28px; font-weight: 700; color: var(--hh-green); letter-spacing: -0.02em;">Hub</span>
+      </div>
+    </div>
+
+    <div style="width: 48px; height: 3px; background: var(--hh-green); border-radius: 3px; margin: 0 auto 32px;"></div>
+
+    <p style="font-size: 22px; font-weight: 400; color: rgba(255,255,255,0.55); max-width: 520px; line-height: 1.6; margin-bottom: 16px;">
+      Ecossistema de Crescimento para Clínicas de Saúde
+    </p>
+    <p style="font-size: 15px; color: rgba(255,255,255,0.3); max-width: 480px; line-height: 1.6; margin-bottom: 48px;">
+      DADOS · IA · AUTOMAÇÃO · MARKETING · VENDAS
+    </p>
+
+    <div style="display: inline-flex; align-items: center; gap: 12px; background: rgba(44,214,104,0.08); border: 1px solid rgba(44,214,104,0.2); border-radius: 999px; padding: 14px 28px;">
+      <span style="font-size: 14px; color: rgba(255,255,255,0.6);">Proposta preparada para</span>
+      <span style="font-size: 14px; font-weight: 700; color: var(--hh-green);">Clínica Encanto</span>
+    </div>
+
+    <div style="margin-top: 48px; font-size: 12px; color: rgba(255,255,255,0.2); letter-spacing: 0.05em;">
+      Documento confidencial · Abril 2025 · Health Hub
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
